@@ -3,7 +3,7 @@ import logging
 import AI
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-
+from setting import get_token
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
@@ -33,7 +33,7 @@ def gender_check(update: Update, context: CallbackContext) -> None:
 
 
 def main() -> None:
-    updater = Updater("5142388894:AAGopokQ8IsAkhbOSs2HhPGPMWa8KFUM3_0")
+    updater = Updater(get_token())
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
