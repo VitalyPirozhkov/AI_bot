@@ -6,7 +6,7 @@ face_model = "./data/opencv_face_detector_uint8.pb"
 gender_prototype = "./data/gender_deploy.prototxt"
 gender_model = "./data/gender_net.caffemodel"
 
-gender_list = ["Тестестероновая мразь", "Мое солнышко"]
+gender_list = ["Сушество мужского пола", "Сушество женского пола"]
 
 face_net = cv2.dnn.readNet(face_model, face_prototype)
 gender_net = cv2.dnn.readNet(gender_model, gender_prototype)
